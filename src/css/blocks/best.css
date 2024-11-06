@@ -1,0 +1,44 @@
+.neural-nets_item11 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--cds-grey-700);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.neural-nets_item11 h2 {
+     font-size: 30px;
+    color: var(--h2-head);
+    padding-top: 24px;
+
+    margin: 5px;
+}
+
+.block-text {
+    font-size: 17px;
+    line-height: 1.5;
+   
+    padding-bottom: 24px;
+    margin: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.block-text p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: inherit;
+}
+
+.block-text a {
+    display: contents;
+    color: #007bff; /* или любой другой цвет ссылок */
+}
+
+.block-text a:hover {
+    text-decoration: underline;
+}

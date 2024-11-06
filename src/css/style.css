@@ -1,0 +1,12 @@
+@import "../css/vendor/normalize.css";
+@import "../css/main.css";
+@import "../css/blocks/buttons.css";
+@import "../css/blocks/forms.css";
+@import "../css/blocks/header.css";
+@import "../css/blocks/modal.css";
+/*подключение слайдера */
+@import "/node_modules/swiper/swiper-bundle.css";
+@import "../css/blocks/banner.css";
+@import "../css/blocks/task.css";
+@import "../css/blocks/best.css";
+

@@ -1,0 +1,12 @@
+<nav class="gpt_nav">
+                <ul class="list1a">
+                    <li><a href="#section0">Инструкция по использованию</a></li>
+                    <li><a class="liist"  href="#section1">Создание текстов</a></li>
+                    <li><a href="#section2">Адаптация и трансформация готовых текстов</a></li>
+                    <li><a href="#section3">Составление упражнений</a></li>
+                    <li><a href="#section4">Работа со словами</a></li>
+                    <li><a href="#section5">Написание учебных планов</a></li>
+                    <li><a href="#section6">Составление контрольных и тестов</a></li>
+                    <li><a href="#section7">Проверка письменных работ</a></li>
+                </ul>
+            </nav>

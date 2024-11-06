@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>App</title>
+
+        <meta
+            name="theme-color"
+            media="(prefers-color-scheme: light)"
+            content="hsl(0 0% 100%)"
+        />
+        <meta
+            name="theme-color"
+            media="(prefers-color-scheme: dark)"
+            content="hsl(0 0% 100%)"
+        />
+        <link rel="stylesheet" href="src/css/style.css" />
+        <link
+            rel="preload"
+            href="src/fonts/IBM-Plex-Sans/IBMPlexSans.woff"
+            as="font"
+            type="font/woff"
+            crossorigin=""
+        />
+        <link
+            rel="preload"
+            href="src/fonts/IBM-Plex-Sans/IBMPlexSans-Medium.woff"
+            as="font"
+            type="font/woff"
+            crossorigin=""
+        />
+        <link
+            rel="preload"
+            href="src/fonts/IBM-Plex-Sans/IBMPlexSans-SemiBold.woff"
+            as="font"
+            type="font/woff"
+            crossorigin=""
+        />
+
+        <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+<link rel="preconnect"
+ href="https://fonts.gstatic.com"
+ crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Open+Sans&family=Roboto:wght@300;400&display=swap"
+ rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="src/css/light.css"
+            media="(prefers-color-scheme: light)"
+        />
+        <link
+            rel="stylesheet"
+            href="src/css/dark.css"
+            media="(prefers-color-scheme: dark)"
+        />
+        <script>
+            // Функция для открытия модального окна с изображением
+            function openModal(imageSrc) {
+                var modal = document.getElementById("myModal");
+                var modalImg = document.getElementById("modalImg");
+                modal.style.display = "block";
+                modalImg.src = imageSrc;
+            }
+
+            // Функция для закрытия модального окна
+            function closeModal() {
+                var modal = document.getElementById("myModal");
+                modal.style.display = "none";
+            }
+        </script>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="flex">
+                    <a class="header-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 86 86" fill="none">
+                            <path d="M80.3306 35.197C81.3076 32.3018 81.6465 29.2344 81.3246 26.1997C81.0028 23.165 80.0277 20.2331 78.4645 17.6004C76.1473 13.6182 72.6077 10.4653 68.3567 8.59678C64.1057 6.72823 59.3629 6.24057 54.8125 7.20418C52.7601 4.922 50.2374 3.09869 47.413 1.85633C44.5886 0.613987 41.5279 -0.0187712 38.4357 0.000424003C33.7835 -0.0106549 29.2479 1.43626 25.4828 4.1326C21.7177 6.82892 18.9178 10.6353 17.4865 15.003C14.4559 15.6151 11.5927 16.859 9.08866 18.6514C6.58463 20.4437 4.49756 22.7431 2.96716 25.3958C0.631426 29.3671 -0.365597 33.9674 0.11987 38.534C0.605339 43.1004 2.5482 47.3965 5.66827 50.803C4.69134 53.6982 4.35244 56.7656 4.67426 59.8003C4.99607 62.835 5.97118 65.7668 7.53431 68.3997C9.85177 72.3817 13.3913 75.5342 17.6424 77.4028C21.8934 79.2714 26.6362 79.7592 31.1864 78.7958C33.2388 81.078 35.7616 82.9012 38.5858 84.1437C41.4103 85.386 44.4709 86.0187 47.5631 85.9996C52.2177 86.0116 56.7557 84.564 60.5221 81.866C64.2887 79.168 67.0892 75.3588 68.5193 70.9885C71.5498 70.3764 74.413 69.1326 76.9172 67.3401C79.421 65.5479 81.5081 63.2483 83.0386 60.5956C85.3715 56.6248 86.3662 52.0255 85.8794 47.4608C85.3928 42.8962 83.4498 38.602 80.3306 35.197ZM47.5701 80.3775C43.7492 80.3829 40.0484 79.0626 37.1144 76.6477C37.2466 76.5766 37.4787 76.451 37.6299 76.3596L54.9844 66.4685C55.42 66.2241 55.7817 65.8696 56.0323 65.4413C56.2831 65.013 56.4136 64.5267 56.4105 64.0324V39.8915L63.7459 44.0707C63.7843 44.0896 63.8174 44.1176 63.8425 44.1522C63.8673 44.1868 63.883 44.227 63.8884 44.2689V64.2611C63.883 68.5313 62.1625 72.6251 59.1038 75.6458C56.0451 78.6668 51.8976 80.3683 47.5701 80.3775ZM12.4761 65.5888C10.5623 62.3259 9.87249 58.503 10.5275 54.7889C10.6564 54.8652 10.8815 55.0009 11.043 55.0925L28.3975 64.9833C28.83 65.2327 29.322 65.3643 29.823 65.3643C30.3237 65.3643 30.8157 65.2327 31.2483 64.9833L52.4363 52.9121V61.2705C52.4386 61.3131 52.4304 61.3558 52.4121 61.3945C52.3938 61.4332 52.3661 61.467 52.3314 61.4926L34.7878 71.4869C31.0354 73.6194 26.5787 74.1959 22.3958 73.0901C18.2129 71.9844 14.6454 69.2865 12.4761 65.5888ZM7.91062 28.2067C9.81614 24.9396 12.8258 22.4383 16.4126 21.1403C16.4126 21.2878 16.404 21.549 16.404 21.7303V41.5122C16.401 42.0063 16.5314 42.4922 16.7817 42.9202C17.032 43.3481 17.3933 43.7024 17.8285 43.9469L39.0164 56.0165L31.6812 60.1955C31.6451 60.2191 31.6034 60.2333 31.5603 60.2372C31.5172 60.2411 31.4736 60.2344 31.4337 60.2176L13.8885 50.2148C10.1425 48.0742 7.40965 44.5555 6.28905 40.4299C5.16845 36.3045 5.7516 31.9088 7.91062 28.2067ZM68.1774 42.0445L46.9892 29.9734L54.3246 25.7959C54.3607 25.7725 54.4024 25.7581 54.4455 25.7542C54.4887 25.7503 54.532 25.7572 54.5719 25.774L72.1172 35.7683C74.8053 37.3004 76.9952 39.5561 78.4309 42.2718C79.8664 44.9875 80.4881 48.0504 80.2234 51.1021C79.9586 54.1538 78.8179 57.0679 76.9355 59.5032C75.0528 61.9385 72.506 63.7942 69.5931 64.8528C69.5931 64.7036 69.5931 64.4426 69.5931 64.2611V44.4792C69.5972 43.986 69.4682 43.5005 69.2194 43.0727C68.9705 42.6448 68.611 42.2901 68.1774 42.0445ZM75.4781 31.2025C75.3494 31.1245 75.1243 30.9905 74.9628 30.8992L57.6081 21.0081C57.1756 20.7591 56.6838 20.6277 56.1828 20.6277C55.6821 20.6277 55.1901 20.7591 54.7575 21.0081L33.5696 33.0795V24.7211C33.5672 24.6783 33.5754 24.6358 33.5937 24.5971C33.612 24.5584 33.6397 24.5246 33.6744 24.499L51.218 14.513C53.9056 12.9839 56.979 12.2416 60.0787 12.3729C63.1783 12.5042 66.1757 13.5037 68.7208 15.2544C71.2657 17.0052 73.2527 19.4348 74.4494 22.2592C75.6461 25.0834 76.0031 28.1854 75.4781 31.2025ZM29.5815 46.1001L22.2444 41.9209C22.206 41.902 22.1727 41.874 22.1479 41.8394C22.123 41.8048 22.1071 41.7646 22.1019 41.7225V21.7303C22.1039 18.6683 22.9898 15.6702 24.6559 13.087C26.3222 10.5037 28.6997 8.44217 31.5102 7.14368C34.3207 5.84518 37.4478 5.36348 40.5256 5.75491C43.6037 6.14634 46.5048 7.39473 48.8897 9.35394C48.7574 9.42515 48.5271 9.55062 48.3741 9.64217L31.0197 19.5331C30.5841 19.7774 30.2226 20.1317 29.9718 20.5596C29.7212 20.9874 29.5907 21.4736 29.5935 21.9676L29.5815 46.1001ZM33.5661 37.6231L43.0029 32.2453L52.4395 37.6196V48.3718L43.0029 53.7463L33.5661 48.3718V37.6231Z" fill="currentcolor"/>
+                          </svg>
+                    </a>
+
+                    <nav class="header-nav">
+                        <a class="modal-nav__link" href="index.html">Главная</a>
+                        <a class="header-nav__link" href="task.html">Опрос</a>
+                        <a class="header-nav__link" href="history.html"
+                            >История</a
+                        >
+                        <a class="header-nav__link" href="best.html">Лучшие</a>
+                    </nav>
+
+                    <div class="header-buttons">
+                        <!-- <button data-btn="secondary">Button</button>
+                        <button id="signup" data-btn="primary">Sign up</button> -->
+                    </div>
+
+                    <fieldset class="switcher">
+                        <input type="checkbox" class="switch" />
+                        <label for="s2"></label>
+                    </fieldset>
+
+                    <div
+                        tabindex="0"
+                        class="btn-icon burger-menu ml-4"
+                        data-variant="ghost"
+                    >
+                        <div data-icon="icon">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M2 3H14V4H2V3ZM2 12H14V13H2V12ZM14 6H2V7H14V6ZM2 9H14V10H2V9Z"
+                                    fill="black"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- модалка навигации  -->
+        <dialog class="modal" id="modal-nav">
+            <div class="modal-wrapper">
+                <header>
+                    <h2 class="modal-title">Navigation</h2>
+                    <div
+                        id="close-modal"
+                        tabindex="0"
+                        class="btn-icon"
+                        data-variant="ghost"
+                    >
+                        <div data-icon="icon">
+                            <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 8 8"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M8 0.7L7.3 0L4 3.3L0.7 0L0 0.7L3.3 4L0 7.3L0.7 8L4 4.7L7.3 8L8 7.3L4.7 4L8 0.7Z"
+                                    fill="#161616"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </header>
+                <section>
+                    <nav class="modal-nav">
+                        <a class="modal-nav__link active" href="index.html">Главная</a>
+                        <a class="modal-nav__link" href="task.html">опрос</a>
+                        <a class="modal-nav__link" href="history.html"
+                        >История</a
+                    >
+                        <a class="modal-nav__link" href="best.html">Лучшие</a>
+                    </nav>
+
+                </section>
+            </div>
+        </dialog>
+
+        <!-- модалка формы  -->
+        <dialog class="modal" id="modal">
+            <div class="modal-wrapper">
+                <header>
+                    <h2 class="modal-title">Contact us</h2>
+                    <div
+                        id="close-modal"
+                        tabindex="0"
+                        class="btn-icon"
+                        data-variant="ghost"
+                    >
+                        <div data-icon="icon">
+                            <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 8 8"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M8 0.7L7.3 0L4 3.3L0.7 0L0 0.7L3.3 4L0 7.3L0.7 8L4 4.7L7.3 8L8 7.3L4.7 4L8 0.7Z"
+                                    fill="#161616"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </header>
+                <form action="#" id="registration-form">
+                    <section>
+                        <div class="input-container">
+                            <label for="username">Your name</label>
+                            <input
+                                id="register-username"
+                                name="username"
+                                type="text"
+                                placeholder="Name"
+                                autocomplete="off"
+                                required
+                            />
+                            <span
+                                class="input-error"
+                                id="username-error"
+                            ></span>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="register-password">Your password</label>
+                            <input
+                                type="password"
+                                id="register-password"
+                                placeholder="Password"
+                                autocomplete="off"
+                                name="password"
+                                required
+                            />
+                            <span
+                                class="input-error"
+                                id="password-error"
+                            ></span>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="register-email">Input email</label>
+                            <input
+                                type="email"
+                                id="register-email"
+                                placeholder="Email"
+                                autocomplete="off"
+                                name="email"
+                                required
+                            />
+                            <span class="input-error" id="email-error"></span>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="register-phone">Input phone</label>
+                            <input
+                                type="tel"
+                                placeholder="Phone"
+                                id="register-phone"
+                                name="phone"
+                                autocomplete="off"
+                                required
+                            />
+                            <span class="input-error" id="phone-error"></span>
+                        </div>
+
+                        <div>
+                            <label for="register-phone">Your message</label>
+                            <textarea
+                                cols="3"
+                                rows="3"
+                                placeholder="Enter your message"
+                                id="register-message"
+                                autocomplete="off"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <!-- <div>
+                                    <label for="number"> Input Number </label>
+                                    <input
+                                        id="number"
+                                        type="number"
+                                        value="1"
+                                        placeholder="count"
+                                        autocomplete="off"
+                                    />
+                                </div> -->
+                    </section>
+                    <footer>
+                        <button type="button" data-variant="primary">
+                            Submit
+                        </button>
+                    </footer>
+                </form>
+            </div>
+        </dialog>
+
+        <main>
+<section>
+    <div class="main-header">
+        <h1>
+            Анализ результатов опроса "Использование нейронных сетей"
+        </h1>
+    </div>
+    <div class="container_task">
+
+    <div class="main-content">
+
+        <div class="neural-nets1">
+            <div class="neural-nets_item1">
+
+                <p>В анонимном опросе приняли участие более 5 150 респондентов – представители организаций среднего профессионального образования и ведущих университетов области.</p>
+                <p>На графике отражено процентное соотношение участвующих в опросе по Липецкой области. Из них районы представлены 33% опрошенных (1 690 респондентов), а город Липецк – 67% опрошенных (3 463 респондентов), что конечно обусловлено концентрацией учебных заведений в области.
+                    <img src="src\images/mesto.jpg" alt="График 1">
+                </p>
+
+                <p>В целом по Липецкой области на вопрос «Знаете ли Вы, что такое нейронные сети?», положительно ответили порядка 81 % (4 158) и только 19 % (995 человек) дали отрицательный ответ (рис. 15). </p>
+                <p>
+                    Однако, используют в работе или учебе независимо от интенсивности только 47% от опрошенных.
+                    <img src="src\images/graf 2.jpg" alt="График 2">
+                </p>
+
+
+                <p>Для ответа на вопрос «Какой нейросетью Вы пользуетесь чаще всего?» респондентам было предоставлено право выбрать несколько нейросетей из представленных или добавить свою.</p>
+                <p> По результатам опроса наибольшей популярностью, как и по России в целом, пользуется ChatGPT, его выбрали 81% обучающихся и 68% преподавателей, на втором месте – Midjourney (25% обучающихся и 23% преподавателей). Далее по нисходящей нейросети DAAL E 3, Yandex GPT и другие.
+                    <img src="src\images/graf3.jpg" alt="График 3">
+                </p>
+
+
+                <p>На вопрос, «Как Вы научились пользоваться нейронными сетями?» только 8% преподавателей отметили прохождение определенного обучения или курсов, в то время как остальные 82% научились использовать нейронные сети иными способами: используя подсказки друзей и знакомых, самостоятельно, используя материалы в сети интернет, или вовсе методом «тыка», что представлено на графике ниже
+                    <img src="src\images/graf4.jpg" alt="График 4">
+                </p>
+
+                <p>Ограничения и проблемы при использовании нейронных сетей в образовании были определены следующим образом:
+                    <ul>
+                        <li>Недостаток знаний во НС: 54% преподавателей и 43% студентов;</li>
+                        <li>Трудности в интеграции с существующими образовательными </li>
+                        <li>Недостаток ресурсов, необходимых для эффективного использования нейронных сетей: 31% преподавателей и 28% студентов;</li>
+                        <li>Проблемы этического характера: 17% респондентов указали их при использовании НС в образовании.</li>
+                    </ul>
+                    <img src="src\images/graf5.jpg" alt="График 5">
+                </p>
+
+
+                <p>В качестве ответа на вопрос «В каких областях, по вашему мнению, опасен искусственный интеллект?», потеря работы у преподавателей оказалась лишь на 4 месте, набрав 29% голосов. На первом месте указали «введение в заблуждение и распространение дезинформации», за этот ответ проголосовало 42% респондентов. Второе место отдано было «манипуляции общественным мнением» – 32%, на третьем – «ухудшение качества образования» – 31%. Нарушение приватности набрало 28% голосов.</p>
+                    <p>Студенты в противоположность преподавателям, потерю работы указали как основное направление, подверженное влиянию ИИ и отдали за него 40% голосов. А «манипуляции общественным мнением» выбрали как наименее опасное направление, отдав за него 23% голосов, что показано ниже
+                        <img src="src\images/graf6.jpg" alt="График 6">
+                   </p>
+
+                   <p>Результат проведенного опроса соответствует результату опроса среди учащихся вузов, который провели аналитики школы IT-профессий <a class="a1" href="https://skillbox.ru/media/education/studenty-rossiyskikh-vuzov-rasskazali-kak-imenno-primenyayut-neyroseti-v-uchyebe/">Skillfactory</a>, основная часть опрошенных (81%) считает, что нейросети очень помогают в учебном процессе. Более половины студентов российских вузов (56%) считают, что искусственный интеллект в будущем сможет заменить многие специальности. Кроме того, большинство (79%) студентов хотели бы, чтобы в вузах обучали пользованию нейросетями</p>
+                   <div class="create-line"></div>
+
+                    <h2>Пройти опрос</h2>
+                    <p>Примите участие в нашем опросе и поделитесь своим мнением</p>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHq2PSCwHxZdtQoEc84JJ6vKjiFBMbVL8r-NRyEcW8fRAFaQ/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+
+            </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="btn-up btn-up_hide"></div>
+
+        </main>
+
+        <script src="src/js/theme-switcher.js"></script>
+        <script type="module" src="src/js/script.js"></script>
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+              <img id="modalImg" src="" alt="">
+            </div>
+          </div>
+    </body>
+</html>
